@@ -1,4 +1,7 @@
 # CheatSpy
+
+![Logo](assets/icons/516x516.png)
+
 CheatSpy is a fork of MemSpy (ORIGINAL README BELOW).
 
 # MemSpy
@@ -21,7 +24,7 @@ To execute the app you must run ```python gui.py```. After that, a window will p
 * Now user can set a different value on the search box and deside an operation. Next, user can press the filter button to filter out some values.
 * The desired value can be transferred to the left-down box by double-clicking the address. In that box user can freeze or change the values using right click.
 
-![GUI](imgs/GUI.png)
+![GUI](assets/imgs/GUI.png)
 
 ## Future Goals
 In this section, we provide some future goals about this project.
