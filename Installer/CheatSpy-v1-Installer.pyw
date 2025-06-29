@@ -157,7 +157,7 @@ class InstallerApp(tk.Tk):
 
             # Create desktop shortcut (Windows only)
             desktop_path = os.path.join(home_dir, "Desktop")
-            target_script = os.path.join(install_dir, "CheatSpy-App", "gui.pyw")
+            target_script = os.path.join(install_dir, "CheatSpy-App", "gui.py")
             shortcut_path = os.path.join(desktop_path, "CheatSpy.lnk")
 
             if os_name == "Windows":
