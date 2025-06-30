@@ -14,7 +14,8 @@ class App(tk.Tk):
 		self.backend = Backend()
 		self.images = []
 		# Configuring Window
-		self.title("Mem Scanner")
+		self.title("CheatSpy GUI")
+		self.iconbitmap("icons/icon.ico")
 		width = 1000
 		height = 700
 		horizontal_spacing = 10
@@ -268,7 +269,7 @@ class App(tk.Tk):
 		item = self.processTree.item(self.processTree.focus())
 		self.backend.init_process_reader(item["tags"][0])
 		self.scanVar.set('Not Started')
-		self.title(f'Mem Scanner - {item["values"][0]}')
+		self.title('CheatSpy GUI')
 		self.isAttached = True
 
 	def select_address_command(self, event):
