@@ -39,9 +39,9 @@ else:
     WIN32_AVAILABLE = False
 
 CHEATSY_ZIP_URL = "https://github.com/OptionallyBlueStudios/CheatSpy/raw/refs/heads/main/ZIPs/Latest.zip"
-CHEATSPY_DEV_ZIP_URL = "https://github.com/OptionallyBlueStudios/CheatSpy/raw/refs/heads/dev/ZIPs/Latest.zip"
+CHEATSPY_DEV_ZIP_URL = "https://github.com/OptionallyBlueStudios/CheatSpy/raw/refs/heads/development/ZIPs/Latest.zip"
 REQUIREMENTS_URL = "https://github.com/OptionallyBlueStudios/CheatSpy/raw/refs/heads/main/CheatSpy-App/requirements.txt"
-REQUIREMENTS_URL_DEV = "https://github.com/OptionallyBlueStudios/CheatSpy/raw/refs/heads/dev/CheatSpy-App/requirements.txt"
+REQUIREMENTS_URL_DEV = "https://github.com/OptionallyBlueStudios/CheatSpy/raw/refs/heads/development/CheatSpy-App/requirements.txt"
 ICON_URL = "https://raw.githubusercontent.com/OptionallyBlueStudios/CheatSpy/refs/heads/main/assets/icons/516x516.png"
 
 class InstallerApp(tk.Tk):
