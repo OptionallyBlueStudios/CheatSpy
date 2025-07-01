@@ -5,6 +5,17 @@ from threading import Thread
 from backend import Backend
 from tkinter import ttk
 import tkinter as tk
+import os
+import sys
+
+import sys
+import os
+
+BASE_DIR = getattr(sys, '_MEIPASS', os.path.abspath(os.path.dirname(__file__)))
+
+if not os.path.isfile(os.path.join(BASE_DIR, "README.txt")):
+    print("ERROR: README.txt not found in the base directory. Exiting.")
+    sys.exit(1)
 
 
 class App(tk.Tk):
@@ -15,7 +26,7 @@ class App(tk.Tk):
 		self.images = []
 		# Configuring Window
 		self.title("CheatSpy GUI")
-		self.iconbitmap("icons/icon.ico")
+		self.iconbitmap(os.path.join(BASE_DIR, "icons", "icon.ico"))
 		width = 1000
 		height = 700
 		horizontal_spacing = 10
