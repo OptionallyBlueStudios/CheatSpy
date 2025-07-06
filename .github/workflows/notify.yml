@@ -14,11 +14,12 @@ jobs:
     steps:
       - name: Send notification to Guilded
         run: |
+          cat <<EOF > payload.json
+          {
+            "content": "🛠️ GitHub Repo Event\n* Repo: ${{ github.repository }}\n* Event: ${{ github.event_name }}\n* Actor: ${{ github.actor }}\n* Branch: ${{ github.ref }}\n* Commit: ${{ github.sha }}"
+          }
+          EOF
+
           curl -X POST -H "Content-Type: application/json" \
-          -d "$(echo '{"content":"🛠️ Event on GitHub Repo:\n'"\
-            "* Repo: ${{ github.repository }}\n"\
-            "* Event: ${{ github.event_name }}\n"\
-            "* Actor: ${{ github.actor }}\n"\
-            "* Branch: ${{ github.ref }}\n"\
-            "* Commit: ${{ github.sha }}"'})" \
-          https://media.guilded.gg/webhooks/ca13dd0e-cd96-47b2-8a3f-e4ea8334df53/D01PNRwCXIOUyuyG6w4kAAUAaGW8EIIwGoIQ2kCymsAISkKIcAuki2AycYIeEE4O2KYY8YioU02U6u2OSqyw0q
+            -d @payload.json \
+            https://media.guilded.gg/webhooks/ca13dd0e-cd96-47b2-8a3f-e4ea8334df53/D01PNRwCXIOUyuyG6w4kAAUAaGW8EIIwGoIQ2kCymsAISkKIcAuki2AycYIeEE4O2KYY8YioU02U6u2OSqyw0q
