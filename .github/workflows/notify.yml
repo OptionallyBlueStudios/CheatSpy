@@ -27,7 +27,7 @@ jobs:
         run: |
           cat <<EOF > payload.json
           {
-            "content": "🛠️ GitHub Repo Event\n* Repo: ${{ github.repository }}\n* Event: ${{ github.event_name }}\n* Actor: ${{ github.actor }}\n* Branch: ${{ github.ref }}\n* Commit: ${{ steps.commit.outputs.sha }}\n* Commit Message: ${{ steps.commit.outputs.msg }}\n* Commit Author: ${{ steps.commit.outputs.author\n* EOM }}\n"
+            "content": "🛠️ GitHub Repo Event\n* Repo: ${{ github.repository }}\n* Event: ${{ github.event_name }}\n* Actor: ${{ github.actor }}\n* Branch: ${{ github.ref }}\n* Commit: ${{ steps.commit.outputs.sha }}\n* Commit Message: ${{ steps.commit.outputs.msg }}\n* Commit Author: ${{ steps.commit.outputs.author }}\n* EOM"
           }
           EOF
 
