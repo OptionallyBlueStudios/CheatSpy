@@ -23,9 +23,12 @@ button.pack()
 def OpenCredits():
     CreditsPage.mainloop()
 
+creditsButton = ctk.CTkButton(window, text='Open credits', command=OpenCredits)
+creditsButton.pack(side="bottom", pady=10) # Change Alignment To Bottom
 
-credits = ctk.CTkButton(window, text='Open credits', command=OpenCredits)
-credits.pack(side="bottom", pady=10) # Change Alignment To Bottom
+Credits = ctk.CTkLabel(CreditsPage, text="""Cheatspy And Cheathub made by OptionallyBlueStudios
+Original Memspy/memscanner by nikos-pap
+Customtkinter by Tom Schimansky""")
 
 # NOTE: You should probably use classes
 
