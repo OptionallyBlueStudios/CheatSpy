@@ -2,3 +2,5 @@ To import a package, use
 import PACKAGENAME
 from PACKAGENAME import MODULE
 import PACKAGENAME as CUSTOMNAME
+
+hi
