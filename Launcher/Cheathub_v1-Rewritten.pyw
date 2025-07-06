@@ -16,13 +16,14 @@ window = ctk.CTk()
 loginwind = ctk.CTk()
 CreditsPage = ctk.CTk()
 current_os = platform.system()
-screen_width = window.winfo_screenwidth() - 50
-screen_height = window.winfo_screenheight() - 50
+screen_width = window.winfo_screenwidth() - 300
+screen_height = window.winfo_screenheight() - 300
 
 ###### SETUP WINDOWS ######
 
 window.title("CheatHub v0-ALPHA")
 window.geometry(f"{screen_width}x{screen_height}+0+0")
+
 # Launch As Maximised
 if current_os == "Windows":
     window.state('zoomed')
@@ -30,6 +31,7 @@ elif current_os == "Darwin":
     window.attributes('-zoomed', True)
 else:
     window.attributes('-zoomed', True)
+
 # Credits Window
 CreditsPage.title("Credits")
 CreditsPage.geometry("400x400")
@@ -68,7 +70,7 @@ window.mainloop()
 # Move Python Script To Folder
 # Style orange
 # Make fullscreenable (windowed) _/
-#
+# Add icon from Prtototoesypes.pyw
 #
 #
 #
