@@ -17,7 +17,7 @@ button = ctk.CTkButton(window, text="View Repository", command=button_event)
 button.pack()
 
 credits = ctk.CTkLabel(window, text='Made by OptionallyBlueStudios')
-credits.pack(side="bottom") # Change Alignment To Bottom
+credits.pack(side="bottom", pady=10) # Change Alignment To Bottom
 
 # NOTE: You should probably use classes
 
