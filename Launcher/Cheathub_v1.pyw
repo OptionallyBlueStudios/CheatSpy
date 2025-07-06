@@ -31,3 +31,18 @@ credits.pack(side="bottom", pady=10) # Change Alignment To Bottom
 
 # main loop
 window.mainloop()
+
+#  THINGS TO DO
+# Use classes
+# Style GUI
+# Move Python Script To Folder
+# Style orange
+# Make fullscreenable (windowed)
+#
+#
+#
+#
+#
+#
+#
+#
