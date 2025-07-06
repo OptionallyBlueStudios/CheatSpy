@@ -6,6 +6,8 @@ import platform
 import os
 import urllib.request
 
+###### Download Missing Modules ######
+
 try:
     import customtkinter as ctk
 except ImportError:
@@ -85,10 +87,8 @@ def OpenCredits():
     CreditsPage.deiconify()  # Show window
 
 # Setup Widgets
-windowTitleMainTop = ctk.CTkLabel(window, text='Welcome to CheatHub Alpha')
-windowTitleMainTop.pack()
-viewRepoButton = ctk.CTkButton(window, text="View Repository", command=button_event)
-viewRepoButton.pack()
+viewRepoButton = ctk.CTkButton(window, text="View Repository", command=button_event, font=ctk.CTkFont(size=18, weight="bold"), fg_color="transparent", text_color="white", hover=False)
+viewRepoButton.pack(anchor="nw", padx=10, pady=10)
 creditsButton = ctk.CTkButton(window, text='Open credits', command=OpenCredits)
 creditsButton.pack(side="bottom", pady=10)
 
