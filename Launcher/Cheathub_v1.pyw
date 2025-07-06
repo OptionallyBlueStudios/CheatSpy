@@ -6,6 +6,10 @@ window = ctk.CTk()
 window.title("CheatHub v0-ALPHA")
 window.geometry("800x600")
 
+CreditsPage = ctk.CTk()
+CreditsPage.title("Credits")
+CreditsPage.geometry("300x400")
+
 # widgets
 label = ctk.CTkLabel(window, text='Welcome to CheatHub Alpha')
 label.pack()
@@ -16,7 +20,11 @@ def button_event():
 button = ctk.CTkButton(window, text="View Repository", command=button_event)
 button.pack()
 
-credits = ctk.CTkLabel(window, text='Made by OptionallyBlueStudios')
+def OpenCredits():
+    CreditsPage.mainloop()
+
+
+credits = ctk.CTkButton(window, text='Open credits', command=OpenCredits)
 credits.pack(side="bottom", pady=10) # Change Alignment To Bottom
 
 # NOTE: You should probably use classes
