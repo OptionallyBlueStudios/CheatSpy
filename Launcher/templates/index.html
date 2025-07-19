@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EMBEDDED | BlueHub Page</title>
+</head>
+<body>
+    <h1>Run Python Script</h1>
+    <button onclick="runScript()">Click to Run</button>
+
+    <script>
+        function runScript() {
+            fetch('/run-script')
+                .then(response => response.text())
+                .then(data => alert(data))
+                .catch(err => alert("Error: " + err));
+        }
+    </script>
+</body>
+</html>
