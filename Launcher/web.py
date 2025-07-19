@@ -64,6 +64,12 @@ class API:
         print(f"Script saved to {temp_script_path}")
         print("Executing Script")
         subprocess.run([sys.executable, temp_script_path])
+    def openCheatSpyApp(self):
+        home_dir = os.path.expanduser("~")
+        csins_dir = os.path.join(home_dir, "CheatSpyInstaller")
+        csapp_dir = os.path.join(csins_dir, "CheatSpy-App")
+        pythonfile_dir = os.path.join(csapp_dir, "gui.pyw")
+        subprocess.run([sys.executable, pythonfile_dir])
 
 if __name__ == '__main__':
     api = API()
