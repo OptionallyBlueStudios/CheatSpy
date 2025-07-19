@@ -1,4 +1,3 @@
-import webview
 import subprocess
 import webbrowser
 import tkinter as tk
@@ -7,6 +6,33 @@ import os
 import subprocess
 import urllib.request
 import sys
+
+def install_package(package):
+    # Show popup window during installation
+    root = tk.Tk()
+    root.title("Installer")
+    label = tk.Label(root, text=f"Installing {package}...\nPlease wait.")
+    label.pack(padx=20, pady=20)
+    root.update()
+
+    # Run pip install
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+    # Close popup after installation
+    root.destroy()
+
+def check_and_install(package):
+    try:
+        __import__(package)
+    except ImportError:
+        # Run the installation in main thread to show tkinter window properly
+        install_package(package)
+
+# Run check at script start
+check_and_install("pywebview")
+
+# Now you can import pywebview safely
+import webview
 
 script_url = "https://github.com/OptionallyBlueStudios/CheatSpy/raw/refs/heads/main/Installer/CheatSpy-v1.2-Installer.pyw"
 
