@@ -7,6 +7,8 @@ import urllib.request
 import sys
 import ctypes
 
+version = 2
+
 def install_package(package):
     # Show popup window during installation
     root = tk.Tk()
@@ -75,15 +77,15 @@ def set_taskbar_icon(icon_path):
         ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
 class API:
-    def run_script(self):
-        print("Script requested by frontend.")
-        subprocess.Popen([sys.executable, "script.py"])
-        return "Script launched."
 
     def openDiscord(self):
         print("Open Discord Requested.")
         webbrowser.open_new_tab('https://optb.short.gy/discord')
         return "Check your browser for the discord invite."
+
+    def OpenURL_INT(self, url):
+        print("Open URL Requested.")
+        webbrowser.open_new_tab(url)
 
     def openGithub(self):
         print("Open GitHub Page Requested.")
@@ -123,7 +125,7 @@ if __name__ == '__main__':
     # Create the webview window with the API object
     webview.create_window(
         title="BlueHub",
-        url="https://optionallybluestudios.github.io/BlueHub",
+        url="https://optionallybluestudios.github.io/BlueHub?page=home&bhver=" + version,
         js_api=api,
         width=screen_width,
         height=screen_height,
@@ -131,4 +133,4 @@ if __name__ == '__main__':
         maximized=True,
     )
 
-    webview.start(set_icon, gui='qt')
+    webview.start(set_icon, gui='edgechromium')
