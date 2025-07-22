@@ -7,7 +7,7 @@ import urllib.request
 import sys
 import ctypes
 
-version = 2
+version = 2 # CHANGE AT BOTTOM
 
 def install_package(package):
     # Show popup window during installation
@@ -125,7 +125,7 @@ if __name__ == '__main__':
     # Create the webview window with the API object
     webview.create_window(
         title="BlueHub",
-        url = "https://optionallybluestudios.github.io/BlueHub?page=home&bhver=" + str(version),
+        url = "https://optionallybluestudios.github.io/BlueHub?page=home&bhver=2",
         js_api=api,
         width=screen_width,
         height=screen_height,
