@@ -125,7 +125,7 @@ if __name__ == '__main__':
     # Create the webview window with the API object
     webview.create_window(
         title="BlueHub",
-        url="https://optionallybluestudios.github.io/BlueHub?page=home&bhver=" + version,
+        url = "https://optionallybluestudios.github.io/BlueHub?page=home&bhver=" + str(version),
         js_api=api,
         width=screen_width,
         height=screen_height,
