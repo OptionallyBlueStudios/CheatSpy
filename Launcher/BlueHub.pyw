@@ -7,7 +7,7 @@ import urllib.request
 import sys
 import ctypes
 
-version = 2 # CHANGE AT BOTTOM
+version = 2.5 # CHANGE AT BOTTOM
 
 def install_package(package):
     # Show popup window during installation
