@@ -12,8 +12,8 @@ import importlib
 # --- Constants ---
 CHEATSY_ZIP_URL = "https://github.com/OptionallyBlueStudios/CheatSpy/raw/refs/heads/main/ZIPs/Latest.zip"
 CHEATSPY_DEV_ZIP_URL = "https://github.com/OptionallyBlueStudios/CheatSpy/raw/refs/heads/development/ZIPs/Latest.zip"
-REQUIREMENTS_URL = "https://github.com/OptionallyBlueStudios/CheatSpy/raw/refs/heads/main/CheatSpy-App/requirements.txt"
-REQUIREMENTS_URL_DEV = "https://github.com/OptionallyBlueStudios/CheatSpy/raw/refs/heads/development/CheatSpy-App/requirements.txt"
+REQUIREMENTS_URL = "https://raw.githubusercontent.com/OptionallyBlueStudios/CheatSpy/refs/heads/main/requirements.txt"
+REQUIREMENTS_URL_DEV = "https://raw.githubusercontent.com/OptionallyBlueStudios/CheatSpy/refs/heads/development/requirements.txt"
 ICON_URL = "https://raw.githubusercontent.com/OptionallyBlueStudios/CheatSpy/refs/heads/main/assets/icons/516x516.png"
 TOKENSERVICE = "http://141.147.118.157:5678/webhook/2eced3cf-68df-46d6-b30f-671771e30123"  # Replace with your webhook URL
 
